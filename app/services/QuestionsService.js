@@ -19,9 +19,10 @@ class QuestionsService {
     const correctAnswer = question.find(
       (correctQuestion) => correctQuestion.id == questionId
     );
-    console.log(answer);
     if (correctAnswer.correct_answer == answer) {
       Pop.success("You got the question right!");
+    } else {
+      Pop.error("You got the question wrong");
     }
   }
 }

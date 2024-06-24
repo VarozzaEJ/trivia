@@ -22,10 +22,10 @@ export class Question {
     <div class="col-12">
       <div class="row">
         <div class="col-6 bg-primary">
-          <h2 onclick="app.QuestionsController.checkAnswer('${this.correct_answer}','${this.id}')" class="text-center text-light py-5" role="button">True</h2>
+          <h2 onclick="app.QuestionsController.checkAnswer('True','${this.id}')" class="text-center text-light py-5" role="button">True</h2>
         </div>
         <div class="col-6 bg-danger">
-          <h2 onclick="app.QuestionsController.checkAnswer('${this.correct_answer}','${this.id}')" class="text-center text-light py-5" role="button">False</h2>
+          <h2 onclick="app.QuestionsController.checkAnswer('False','${this.id}')" class="text-center text-light py-5" role="button">False</h2>
         </div>
       </div>
     </div>
