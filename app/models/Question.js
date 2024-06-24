@@ -1,7 +1,10 @@
+import { generateId } from "../utils/GenerateId.js";
+
 export class Question {
   constructor(data) {
+    this.id = generateId();
     this.question = data.question;
-    this.correct_answer = data.incorrect_answer;
+    this.correct_answer = data.correct_answer;
     this.incorrect_answer = data.incorrect_answer;
   }
 
@@ -19,10 +22,10 @@ export class Question {
     <div class="col-12">
       <div class="row">
         <div class="col-6 bg-primary">
-          <h2 class="text-center text-light py-5" role="button">True</h2>
+          <h2 onclick="app.QuestionsController.checkAnswer('${this.correct_answer}','${this.id}')" class="text-center text-light py-5" role="button">True</h2>
         </div>
         <div class="col-6 bg-danger">
-          <h2 class="text-center text-light py-5" role="button">False</h2>
+          <h2 onclick="app.QuestionsController.checkAnswer('${this.correct_answer}','${this.id}')" class="text-center text-light py-5" role="button">False</h2>
         </div>
       </div>
     </div>

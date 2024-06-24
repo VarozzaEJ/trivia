@@ -27,8 +27,8 @@ export class QuestionsController {
     setHTML("questions", innerHTMLString);
   }
 
-  checkAnswer(answer) {
-    let Questions = AppState.questions;
-    Questions.filter((question) => question.correct_answer);
+  checkAnswer(answer, questionId) {
+    console.log("Here is the answer for the question you clicked", answer);
+    questionsService.checkAnswer(answer, questionId);
   }
 }
