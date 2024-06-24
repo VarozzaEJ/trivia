@@ -10,8 +10,8 @@ export class Question {
 
   get questionTemplate() {
     return `
-        <div class="container">
-  <div class="row">
+        <div class="container border border-dark shadow my-2">
+  <div class="row border-dark shadow">
     <div class="col-12">
       <p class="fs-2 text-center py-5">
         ${this.question}
