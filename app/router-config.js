@@ -1,5 +1,3 @@
-import { ExamplesController } from "./controllers/ExamplesController.js";
-import { HomeController } from "./controllers/HomeController.js";
 import { QuestionsController } from "./controllers/QuestionsController.js";
 import { Router } from "./utils/Router.js";
 

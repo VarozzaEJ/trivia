@@ -1,6 +1,9 @@
 class QuestionsService {
-  getQuestions() {
-    console.log("Getting the questions...");
+  async getQuestions() {
+    const response = await axios.get(
+      "https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=boolean"
+    );
+    console.log(response.data.results);
   }
 }
 
