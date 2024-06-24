@@ -1,5 +1,13 @@
+import { questionsService } from "../services/QuestionsService.js";
+
 export class QuestionsController {
-  constructor() {
-    console.log("Questions Controller is loaded");
+  constructor(data) {
+    this.question = data.question;
+    this.correctAnswer = data.correctAnswer;
+    this.incorrectAnswer = data.incorrectAnswer;
+  }
+
+  getQuestions() {
+    questionsService.getQuestions();
   }
 }
